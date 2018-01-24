@@ -20,7 +20,6 @@ header {
     background-color: #333;
     color: #bbb;
     flex-shrink: 0;
-    height: 98px;
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -28,12 +27,14 @@ header {
 
 header h1 {
   font-size: 2em;
+  height: 98px;
   margin: 0;
   padding-top: 25px;
 }
 
 nav {
   float: right;
+  height: 98px;
   padding-top: 30px;
 }
 
@@ -162,4 +163,17 @@ footer {
   height: 100px;
   padding-top: 35px;
   text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  /* change jumbotron settings:
+      font-size: of h1 and p;
+      text-align: center - h1 and p;
+      margin-top: of .jumbotron h1 to accommodate the two-row header;
+      change the background color of the nav bar;
+      change the height of h1 and p to 73px instead of 98px;
+      change the nav bar display to flex, as in the other responsive design; 
+      
+      
+      */
 }
