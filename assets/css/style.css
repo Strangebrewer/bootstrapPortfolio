@@ -1,25 +1,21 @@
-html {background-image: url("../images/ravenna.png");
-}
-
-html, body {
+html {
+  background-image: url("../images/ravenna.png");
   min-height: 100%;
+  position: relative;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
   background-color: transparent;
   color: #727272;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   font-size: 22px;
+  margin-bottom: 100px;
 }
 
 header {
     border-bottom: 2px solid #727272;
     background-color: #333;
     color: #bbb;
-    flex-shrink: 0;
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -85,7 +81,6 @@ h3 {
   background-image: url("../images/j_bkgd.jpg");
   background-size: cover;
   border-bottom: 2px solid #727272;
-  flex-shrink: 0;
   text-align: center;
   z-index: 888;
 }
@@ -110,12 +105,8 @@ h3 {
   text-shadow: 0 0 15px #fff;
 }
 
-.content {
-  flex: 1 0 auto;
-}
-
 .main-content {
-  background-color: #fefefe;
+  background-color: #f8f8f8;
   border: 2px solid #727272;
   line-height: 2;
   margin-bottom: 30px;
@@ -127,18 +118,71 @@ h3 {
   max-width: 100%;
   margin-right: 20px;
   margin-top: 12px;
-  width: 350px;
+  width: 300px;
 }
 
+#about-me h2 {
+  margin-bottom: 18px;
+}
+
+#portfolio {
+  padding: 30px 15px 0 15px;
+}
+
+#portfolio img {
+  width: 100%;
+}
+
+#portfolio .row {
+  margin-left: 0;
+  margin-right: 0;  
+  position: relative;
+}
+
+#portfolio h2 {
+  margin-bottom: 0;
+}
+
+/* removing padding from each div solves the heading overlap problem (created by setting h4 to position: absolute, width: 100%), but eliminates the space between the columns; I wrapped each one in an extra set of row / column to offset */
+#portfolio .box {
+  margin-bottom: 30px;
+  padding: 0;
+  position: relative;
+}
+
+/* much of this h4 styling is to override Bootstrap styles */
+#portfolio h4 {
+  background: linear-gradient(to right,#727272, #bdbdbd 1.7%, #727272 3%, #333 6%, #222, #222, #333 94%, #727272 97%, #bdbdbd 98.3%, #727272);
+  border-bottom: 3px solid #4aaaa5;
+  border-top: 3px solid #4aaaa5;
+  color: linear-gradient(to right, #034d49, #4aaaa5, #034d49);
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  text-shadow: 0 0 30px #fefefe;
+  width: 100%;
+}
+
+#portfolio a:hover {
+    opacity: .75;
+  text-decoration: none;
+}
+
+
 aside {
-  background-color: #fefefe;
+  background-color: #f8f8f8;
   border: 2px solid #727272;
   margin-bottom: 30px;
   padding: 20px 30px 35px 30px;
 }
 
 aside div a {
-  padding-right: 6px;
+  padding-right: 5px;
 }
 
 aside div a:last-child {
@@ -146,23 +190,21 @@ aside div a:last-child {
 }
 
 aside a:hover {
-  opacity: .7;
+  opacity: .75;
+  text-decoration: none;
 }
-
-
-
-
-
 
 footer {  
   background-color: #333;
   border-top: 2px solid #727272;
   color: #bbb;
-  flex-shrink: 0;
   font-size: .7em;
   height: 100px;
   padding-top: 35px;
+  position: absolute;
+  bottom: 0;
   text-align: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 991px) {
