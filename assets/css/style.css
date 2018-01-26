@@ -141,8 +141,13 @@ h4 {
 
 .jumbotron p {
   font-size: 2em;
-  line-height: 1.6;
-  text-shadow: 0 0 15px #fff;
+  line-height: 1.8;
+  text-shadow: 0 0 10px #fff;
+}
+
+.jumbotron .jumbo-shrimp {
+  font-size: 1.1em;
+  text-shadow: 0 0 5px #fff;
 }
 
 /* main content styling */
@@ -159,7 +164,7 @@ h4 {
 
 #about-me img {
   float: left;
-  max-width: 60%;
+  max-width: 50%;
   margin-right: 20px;
   margin-top: 12px;
 }
@@ -245,7 +250,7 @@ aside {
 }
 
 aside div a {
-  padding-right: 5px;
+  padding-right: 3px;
 }
 
 aside div a:last-child {
@@ -286,6 +291,9 @@ footer {
     font-size: 1.5em;
     line-height: 1.4;
   }
+  .jumbotron .jumbo-shrimp {
+    font-size: .9em;
+  }
 
 }
 
@@ -294,7 +302,6 @@ footer {
   .navbar-toggle {
     margin: 12px 15px 31px 0;
   }
-
   .jumbotron {
     padding: 30px;
   }
@@ -305,6 +312,9 @@ footer {
     font-size: 1.1em;
     line-height: 1.15;
   }
+  .jumbotron .jumbo-shrimp {
+    font-size: .7em;
+  }
 
 }
 
@@ -313,9 +323,6 @@ footer {
   .navbar {
     margin-bottom: 0;
     position: relative;
-  }
-  .col-xs-6 {
-    width: 100%;
   }
   #about-me img {
     max-width: 100%;
@@ -331,11 +338,22 @@ footer {
     font-size: 1em;
     line-height: 1;
   }
+  .jumbotron .jumbo-shrimp {
+    font-size: .65em;
+  }
   #about-me p {
     font-size: .8em;
   }
   #about-me img {
     margin-bottom: 10px;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  
+  .col-xs-6 {
+    width: 100%;
   }
 
 }
@@ -358,6 +376,9 @@ footer {
   }
   #about-me p {
     font-size: .6em;
+  }
+  .jumbotron .jumbo-shrimp {
+    font-size: .5em;
   }
 
 }
