@@ -12,44 +12,6 @@ body {
   margin-bottom: 100px;
 }
 
-header {
-    border-bottom: 2px solid #727272;
-    background-color: #333;
-    color: #bbb;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-}
-
-header h1 {
-  font-size: 2em;
-  height: 98px;
-  margin: 0;
-  padding-top: 25px;
-}
-
-nav {
-  float: right;
-  height: 98px;
-  padding-top: 30px;
-}
-
-nav a {
-  color: #4aaaa5;
-  border-right: 1px solid #6ed3ce7c;
-  padding: 0 20px 0 15px;
-}
-
-nav a:last-child {
-  border: none;
-  padding-right: 0;
-}
-
-nav a:hover {
-  color: #6ed3ce;
-  text-decoration: none;
-}
-
 h1,
 h2,
 h3,
@@ -61,6 +23,11 @@ h6 {
   font-weight: bold;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.25em;
 }
 
 h2 {
@@ -77,12 +44,82 @@ h3 {
   margin-bottom: 25px;
 }
 
+h4 {
+  background: linear-gradient(to right,#727272, #bdbdbd 1.7%, #727272 3%, #333 6%, #222, #222, #333 94%, #727272 97%, #bdbdbd 98.3%, #727272);
+  border-bottom: 3px solid #4aaaa5;
+  border-top: 3px solid #4aaaa5;
+  color: linear-gradient(to right, #034d49, #4aaaa5, #034d49);
+  font-size: 1em;
+  line-height: 1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  text-shadow: 0 0 30px #fefefe;
+  width: 100%;
+}
+
+/* navbar styling */
+
+.navbar {
+  background-color: #333;
+  border: unset;
+  border-bottom: 2px solid #727272;
+  border-radius: 0;
+  height: 98px;
+  padding-top:  20px;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-size: unset;
+  height: unset;
+  padding: unset;
+  line-height: unset;
+}
+
+.navbar-default .navbar-collapse {
+  border-color: #727272;
+}
+
+.navbar .navbar-nav > li > a {
+  border-right: 1px solid #6ed3ce7c;
+  color: #4aaaa5;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+.navbar a h1:hover,
+.navbar .navbar-nav > li > a:hover {
+  background-color: transparent;
+  color: #6ed3ce;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav > li .no-border {
+  border: none;
+  padding-right: 0;
+}
+
+.navbar a h1:hover {
+  background-color: transparent;
+  color: #6ed3ce;
+  text-decoration: none;
+}
+
+.navbar-collapse {
+  background-color: #333;
+}
+
+/* jumbotron styling */
+
 .jumbotron {
   background-image: url("../images/j_bkgd.jpg");
-  background-size: cover;
+  background-size: contain;
   border-bottom: 2px solid #727272;
   text-align: center;
-  z-index: 888;
 }
 
 .jumbotron h1,
@@ -95,7 +132,7 @@ h3 {
 
 .jumbotron h1 {
   font-size: 7em;
-  margin-top: 100px;
+  margin-top: 75px;
   text-shadow: 0 0 30px #fff;
 }
 
@@ -105,6 +142,8 @@ h3 {
   text-shadow: 0 0 15px #fff;
 }
 
+/* main content styling */
+
 .main-content {
   background-color: #f8f8f8;
   border: 2px solid #727272;
@@ -113,17 +152,20 @@ h3 {
   padding: 30px;
 }
 
+/* index.html styling */
+
 #about-me img {
   float: left;
-  max-width: 100%;
+  max-width: 60%;
   margin-right: 20px;
   margin-top: 12px;
-  width: 300px;
 }
 
 #about-me h2 {
   margin-bottom: 18px;
 }
+
+/* portfolio.html styling */
 
 #portfolio {
   padding: 30px 15px 0 15px;
@@ -150,29 +192,47 @@ h3 {
   position: relative;
 }
 
-/* much of this h4 styling is to override Bootstrap styles */
-#portfolio h4 {
-  background: linear-gradient(to right,#727272, #bdbdbd 1.7%, #727272 3%, #333 6%, #222, #222, #333 94%, #727272 97%, #bdbdbd 98.3%, #727272);
-  border-bottom: 3px solid #4aaaa5;
-  border-top: 3px solid #4aaaa5;
-  color: linear-gradient(to right, #034d49, #4aaaa5, #034d49);
-  font-size: 1em;
-  font-weight: bold;
-  line-height: 1;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  position: absolute;
-  bottom: 15px;
-  text-align: center;
-  text-shadow: 0 0 30px #fefefe;
-  width: 100%;
-}
-
 #portfolio a:hover {
     opacity: .75;
   text-decoration: none;
 }
 
+/* contact.html styling */
+
+textarea.form-control {
+  height: 200px;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+input.form-control,
+textarea.form-control {
+  border: 1px solid #4aaaa5;
+}
+
+form {
+  line-height: 1;
+}
+
+form input {
+  margin-bottom: 25px;
+}
+
+form label {
+  margin-bottom: 15px;
+}
+
+.btn {
+  background:linear-gradient(#333, #222, #333);
+  border: 2px solid #4aaaa5;
+  color: #4aaaa5;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: .8em;
+  font-weight: bold;
+  text-shadow: 0 0 30px #fefefe;
+}
+
+/* aside styling */
 
 aside {
   background-color: #f8f8f8;
@@ -194,6 +254,8 @@ aside a:hover {
   text-decoration: none;
 }
 
+/* footer styling */
+
 footer {  
   background-color: #333;
   border-top: 2px solid #727272;
@@ -207,15 +269,92 @@ footer {
   width: 100%;
 }
 
+/* media queries */
+
 @media screen and (max-width: 991px) {
-  /* change jumbotron settings:
-      font-size: of h1 and p;
-      text-align: center - h1 and p;
-      margin-top: of .jumbotron h1 to accommodate the two-row header;
-      change the background color of the nav bar;
-      change the height of h1 and p to 73px instead of 98px;
-      change the nav bar display to flex, as in the other responsive design; 
-      
-      
-      */
+
+  .jumbotron {
+  padding-bottom: 30px;
+  }
+  .jumbotron h1 {
+    font-size: 5em;
+  }
+  .jumbotron p {
+    font-size: 1.5em;
+    line-height: 1.4;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .navbar-toggle {
+    margin: 12px 15px 31px 0;
+  }
+
+  .jumbotron {
+    padding: 30px;
+  }
+  .jumbotron h1 {
+    font-size: 3.8em;
+  }
+  .jumbotron p {
+    font-size: 1.1em;
+    line-height: 1.15;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+  .navbar {
+    margin-bottom: 0;
+    position: relative;
+  }
+  .col-xs-6 {
+    width: 100%;
+  }
+  #about-me img {
+    max-width: 100%;
+  }
+  .jumbotron {
+    padding: 20px;
+  }
+  .jumbotron h1 {
+    font-size: 3.5em;
+    margin-top: 0;
+  }
+  .jumbotron p {
+    font-size: 1em;
+    line-height: 1;
+  }
+  #about-me p {
+    font-size: .8em;
+  }
+  #about-me img {
+    margin-bottom: 10px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .navbar h1 {
+    font-size: 1.75em;
+    padding-top: 5px;
+  }
+  .jumbotron {
+    padding: 10px;
+  }
+  .jumbotron h1 {
+    font-size: 2.5em;
+  }
+  .jumbotron p {
+    font-size: .8em;
+    line-height: 1;
+  }
+  #about-me p {
+    font-size: .6em;
+  }
+
 }
