@@ -79,8 +79,8 @@ h4 {
 .navbar-brand {
   font-size: unset;
   height: unset;
-  padding: unset;
   line-height: unset;
+  padding: unset;
 }
 
 .navbar-default .navbar-collapse {
@@ -90,8 +90,8 @@ h4 {
 .navbar .navbar-nav > li > a {
   border-right: 1px solid #6ed3ce7c;
   color: #4aaaa5;
-  margin-top: 18px;
   margin-bottom: 10px;
+  margin-top: 18px;
   padding: 0 20px;
 }
 
@@ -150,6 +150,35 @@ h4 {
   text-shadow: 0 0 5px #fff;
 }
 
+.jumbotron #h1-anime {
+  animation: opac 2s;
+}
+
+.jumbotron #p1-anime {
+  animation: opac1 4.25s;
+}
+
+.jumbotron #p2-anime {
+  animation: opac2 7s;
+}
+
+@keyframes opac { 
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@keyframes opac1 { 
+  0% { opacity:0; }
+  40% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@keyframes opac2 { 
+  0% { opacity:0; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
 /* main content styling */
 
 .main-content {
@@ -164,9 +193,9 @@ h4 {
 
 #about-me img {
   float: left;
-  max-width: 50%;
   margin-right: 20px;
   margin-top: 12px;
+  max-width: 50%;
 }
 
 #about-me h2 {
@@ -201,16 +230,24 @@ h4 {
 }
 
 #portfolio a:hover {
-    opacity: .75;
+  opacity: .75;
   text-decoration: none;
+}
+
+#portfolio .box {  
+  transition: all 0.35s ease;
+}
+
+#portfolio .box:hover {
+  transform: rotate(5deg);
 }
 
 /* contact.html styling */
 
 textarea.form-control {
-  height: 200px;
-  min-width: 100%;
+  min-height: 200px;
   max-width: 100%;
+  min-width: 100%;
 }
 
 input.form-control,
