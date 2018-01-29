@@ -277,6 +277,11 @@ form label {
   text-shadow: 0 0 30px #fefefe;
 }
 
+.btn:hover {
+  color: #6ed3ce;
+  border-color: #4aaaa5;
+}
+
 /* aside styling */
 
 aside {
