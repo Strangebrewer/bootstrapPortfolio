@@ -240,6 +240,14 @@ h4 {
   text-decoration: none;
 }
 
+#portfolio .box {  
+  transition: all 0.35s ease;
+}
+
+#portfolio .box:hover {
+  transform: rotate(5deg);
+}
+
 /* contact.html styling */
 
 textarea.form-control {
