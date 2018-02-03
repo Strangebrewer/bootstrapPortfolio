@@ -229,17 +229,15 @@ h4 {
   position: relative;
 }
 
+#portfolio .title {
+  margin-bottom: 30px;
+  padding: 0;
+  position: relative;
+}
+
 #portfolio a:hover {
   opacity: .75;
   text-decoration: none;
-}
-
-#portfolio .box {  
-  transition: all 0.35s ease;
-}
-
-#portfolio .box:hover {
-  transform: rotate(5deg);
 }
 
 /* contact.html styling */
