@@ -1,2 +1,2 @@
 # bootstrapPortfolio
-Responsiveness Bootstrap Assignment
+Responsiveness using Bootstrap - rebuild portfolio from week 1 using BOotstrap.
